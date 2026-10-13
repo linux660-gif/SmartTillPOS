@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Till POS</title>
+</head>
+<body>
+
+    <form id="posForm">
+        <div>
+            <label for="name">Customer Name:</label>
+            <input name="name" id="name" type="text" placeholder="John Doe" autocomplete="name" required />
+        </div>
+
+        <div>
+            <label for="productName">Product Name:</label>
+            <input name="productName" id="productName" type="text" placeholder="e.g. Milk" required />
+        </div>
+
+        <div>
+            <label for="unitPrice">Unit Price ($):</label>
+            <input name="unitPrice" id="unitPrice" type="number" step="0.01" min="0" placeholder="0.00" required />
+        </div>
+
+        <div>
+            <label for="receivedQuantity">Received Quantity:</label>
+            <input name="receivedQuantity" id="receivedQuantity" type="number" min="1" step="1" placeholder="1" required />
+        </div>
+
+        <div>
+            <input type="submit" id="submitButton" value="Submit Sale" />
+        </div>
+    </form>
+
+    <div id="popUp">
+        <p>Name:</p>
+        <p id="displayName"> </p>
+        <p>Product Name: </p>
+        <p id="displayProduct"></p>
+        <p>Unit Price:</p>
+        <p id="displayUnitPrice"> </p>
+        <p>Quantity:</p>
+        <p id="displayQuantity">  </p>
+        <p>Total: </p>
+        <p id="displayTotal"></p>
+        <p>Balance: </p>
+        <p id="displayBalance"> </p>
+
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
